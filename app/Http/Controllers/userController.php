@@ -4,29 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class userController extends Controller
 {
-    public function register(Request $request){
-        dd($request);
-        $validate = $request->validate([
-            'username' => 'required|max:12',
-            'email' => 'required|email|max:50',
+    public function store(Request $request){
+        $validated = $request->validate([
+            'username' => 'required',
+            'email' => 'required|email',
             'password'=> 'confirmed|required'
         ]);
-        $emailExist = User::where('email',$validate['email'])->exists();
-        if($emailExist){
-            return view('hh');
-            return redirect()->back()->with('message', 'this email has been taken');
-        }
-        $user = new User;
-        $user->email=$request->email;
-        $user->name=$request->name;
-        $user->password=$request->password;
-        return view('ll');
+        User::create($validated);
+        return redirect('/login');
 
     }
-    public function registerIndex(){
+    public function register(){
         return view('register');
+    }
+    public function login(){
+        return view('login');
     }
 }
