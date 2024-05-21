@@ -49,6 +49,9 @@
                         Anytown, USA 12345
                     </dd>
                 </div>
+                <div>
+                    <dd><a href='/logout' class="w-full hover:bg-red-600 focus:ring-2 focus:outline-none rounded-b-[0.4rem] focus:ring-neutral-300 font-medium text-sm px-5 py-2.5 text-center bg-red-500 text-white">Log out</a></dd>
+                </div>
             </dl>
         </div>
     </div>

@@ -51,7 +51,7 @@
                                 class="sm:text-sm rounded-lg block w-full p-2.5 outline-none border bg-neutral-500 border-neutral-400 placeholder-neutral-200 text-white focus:ring-1 focus:ring-yellow-500 focus:border-yellow-500"
                                 required="">
                         </div>
-                        <div class="flex items-start">
+                        {{-- <div class="flex items-start">
                             <div class="flex items-center h-5">
                                 <input id="terms" aria-describedby="terms" type="checkbox"
                                     class="w-4 h-4 border-none bg-black"
@@ -62,10 +62,10 @@
                                         class="font-medium text-yellow-500 hover:underline dark:text-primary-500"
                                         href="#">Terms and Conditions</a></label>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <button type="submit"
-                            id="exterms" disabled
+                            id="exterms"
                             class="w-full disabled:bg-yellow-600 outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-yellow-500 text-white">Create
                             an account</button>
                         <p class="text-sm font-light text-gray-300">

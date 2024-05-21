@@ -24,7 +24,8 @@
                         class="text-xl font-bold leading-tight tracking-tight md:text-2xl text-neutral-100">
                         Sign in to your account
                     </h1>
-                    <form class="space-y-4 md:space-y-6" action="{{route('index')}}" method="get">
+                    <form class="space-y-4 md:space-y-6" action="{{route('authenticate')}}" method="POST">
+                        @csrf
                         <div>
                             <label for="email"
                                 class="block mb-2 text-sm font-medium text-neutral-100">Your email</label>
@@ -44,7 +45,7 @@
                                 class="text-sm font-medium hover:underline text-yellow-500">Forgot
                                 password?</a>
                         </div>
-                        <button type="submit" 
+                        <button type="submit"
                             class="w-full hover:bg-yellow-600 focus:ring-2 focus:outline-none focus:ring-neutral-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-yellow-500 text-white">Sign
                             in</button>
                         <p class="text-sm font-light text-gray-400">
