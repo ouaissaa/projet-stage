@@ -21,7 +21,7 @@
                         Full name
                     </dt>
                     <dd class="mt-1 text-sm text-neutral-50 sm:mt-0 sm:col-span-2">
-                        John Doe
+                        {{ $user->name }}
                     </dd>
                 </div>
                 <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -29,7 +29,7 @@
                         Email address
                     </dt>
                     <dd class="mt-1 text-sm text-neutral-50 sm:mt-0 sm:col-span-2">
-                        johndoe@example.com
+                        {{ $user->email }}
                     </dd>
                 </div>
                 <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -49,8 +49,10 @@
                         Anytown, USA 12345
                     </dd>
                 </div>
-                <div>
-                    <dd><a href='/logout' class="w-full hover:bg-red-600 focus:ring-2 focus:outline-none rounded-b-[0.4rem] focus:ring-neutral-300 font-medium text-sm px-5 py-2.5 text-center bg-red-500 text-white">Log out</a></dd>
+                <div class="w-full h-full">
+                    <a href='/logout' class="w-full h-full hover:bg-red-600 focus:ring-2 focus:outline-none rounded-b-[0.4rem] focus:ring-neutral-300 font-medium text-sm px-5 py-2.5 text-center bg-red-500 text-white flex items-center justify-center">
+                        Log out
+                    </a>
                 </div>
             </dl>
         </div>

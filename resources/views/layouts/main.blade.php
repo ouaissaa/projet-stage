@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
 
+
     <title>movie app</title>
+    @livewireStyles
 </head>
 
 <body class='font-sans text-neutral-200 bg-neutral-800'>
@@ -37,9 +39,7 @@
                 </li>
             </ul>
             <div class="flex flex-col md:flex-row items-center">
-                <div class="relative mt-3 md:mt-0">
-                    <input type="text" class="bg-neutral-800 focus:ring-yellow-500 focus:ring-2 outline-none rounded-full w-72 px-4 pl-6 py-2" placeholder='Search'>
-                </div>
+                <livewire:search>
                 <div class="md:ml-4 mt-3 md:mt-0">
                     <a href="{{ route('profile') }}">
                         <img src="./img/avatar.jpg" class="rounded-full w-10 h-10 ml-3">
@@ -134,6 +134,7 @@
             <a href="#">ouaissa</a>
         </div>
     </footer>
+    @livewireScripts
 </body>
 
 </html>

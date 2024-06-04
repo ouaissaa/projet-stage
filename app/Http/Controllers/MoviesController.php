@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 use function Pest\Laravel\json;
 
@@ -55,7 +56,8 @@ class MoviesController extends Controller
     }
     public function profile()
     {
-        return view('profile');
+        $user = Auth::user();
+        return view('profile',compact('user'));
     }
 
     /**
@@ -64,7 +66,6 @@ class MoviesController extends Controller
     public function show($id)
     {
         $movie = Http::withToken(config('services.tmdb.token'))->get('https://api.themoviedb.org/3/movie/'.$id.'?append_to_response=credits,videos,images')->json();
-        // dump($movie);
         return view('show',[
             'movie' => $movie,
         ]);
